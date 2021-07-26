@@ -84,12 +84,11 @@ app.get("/dog", (req, res) => {
 app.get("/api/getAnimal/:animal", (req, res) => {
   var chosen = req.params.animal;
   
-  var title = null;
+  var title = chosen;
   var animal = null;
-  
+
   for (var i = 0; i < animals.length; i++) {
     if(chosen == animals[i].animalType){
-      title = chosen;
       animal = animals[i]
     }
   }
